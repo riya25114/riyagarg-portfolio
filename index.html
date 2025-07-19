@@ -9,6 +9,27 @@
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="images/resume.pdf" target="_blank" class="resume-btn">View Resume</a></li>
+        </ul>
+    </nav>
+
 <main class="fade-in">
 
     <!-- ABOUT section -->
@@ -62,29 +83,32 @@
 
     <!-- SKILLS section -->
     <section id="skills">
-
         <h2>Skills</h2>
-
-        <p class="skills languages">
-            Languages - C, C++, Java, Python, HTML, CSS, JavaScript, PHP, SQL
-        </p>
-        <p class="skills web">
-            Web Technologies - Node.js, React.js, Tailwind CSS, Firebase, MongoDB, Express
-        </p>
-        <p class="skills frameworks">
-            AI/ML Frameworks - TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV, Pandas, Numpy, Matplotlib
-        </p>
-        <p class="skills coursework">
-            Coursework - Data Structures and Algorithms, System Design, Database Management System, Object Oriented
-            Programming, Operating System, Networking Fundamentals, Deep Learning, Machine Learning
-        </p>
-        <p class="skills tools">
-            Tools and Development Practices: Git, GitHub, VS Code, Jupyter Notebook, Matlab, CyberGate, Vercel,
-            Netlify
-        </p>
-
+    
+        <div class="skills-row">
+            <div class="skill-box">
+                <strong>Languages:</strong><br>
+                C, C++, Java, Python, HTML, CSS, JavaScript, PHP, SQL
+            </div>
+            <div class="skill-box">
+                <strong>Web Technologies:</strong><br>
+                Node.js, React.js, Tailwind CSS, Firebase, MongoDB, Express
+            </div>
+            <div class="skill-box">
+                <strong>AI/ML Frameworks:</strong><br>
+                TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV, Pandas, Numpy, Matplotlib
+            </div>
+            <div class="skill-box">
+                <strong>Coursework:</strong><br>
+                DSA, System Design, DBMS, OOP, OS, Networking, Deep Learning, ML
+            </div>
+            <div class="skill-box">
+                <strong>Tools:</strong><br>
+                Git, GitHub, VS Code, Jupyter Notebook, Matlab, CyberGate, Vercel, Netlify
+            </div>
+        </div>
     </section>
-
+    
     <!-- PROJECTS section -->
     <section id="projects">
 
@@ -161,6 +185,24 @@
     </footer>
 
 </main>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  // Toggle menu open/close on hamburger click
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
+
 </body>
 
 </html>
