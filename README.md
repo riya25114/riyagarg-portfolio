@@ -31,7 +31,7 @@ https://riyagarg.info/
 
 ## Folder Structure
 
-portfolio
+    portfolio
     │
     ├── index.html # Main HTML file
     ├── style.css # Stylesheet
